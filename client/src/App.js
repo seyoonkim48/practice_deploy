@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useState } from 'react';
 
 function App() {
+  const url = process.env.REACT_APP_API_URL || 'http://localhost:4000';
   const [loginInfo, setLoginInfo] = useState({
     username: '',
     password: ''
@@ -12,7 +13,7 @@ function App() {
   };
   const handleLogin = () => {
     console.log(loginInfo)
-    axios.post('http://localhost:4000/login', loginInfo, {
+    axios.post(`${url}/login`, loginInfo, {
       headers : {
         "Content-type" : 'application/json'
       },
@@ -23,7 +24,7 @@ function App() {
     });
   };
   const handleCheck = () => {
-    axios.get('http://localhost:4000/check', {
+    axios.get(`${url}/check`, {
       withCredentials : true,
       headers : {
         'Content-type' : 'application/json'

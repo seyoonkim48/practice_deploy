@@ -17,8 +17,7 @@ app.post('/login', (req, res) => {
   res.header({'authorization1': 'Bearer Toke'}).json({message : 'Login OK!!!', loginInfo : req.body});
 });
 app.get('/check', (req, res) => {
-  // console.log(req.cookies);
-  console.log(req.headers)
+  console.log(req.cookies);
   res.send('plz everything is alright');
 })
 app.listen(4000, () => console.log('Listening at ==> http://localhost:4000'));
