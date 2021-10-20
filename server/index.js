@@ -20,4 +20,4 @@ app.get('/check', (req, res) => {
   console.log(req.cookies);
   res.send('plz everything is alright');
 })
-app.listen(4000, () => console.log('Listening at ==> http://localhost:4000'));
+app.listen(80, () => console.log('Listening at ==> http://localhost:4000'));
