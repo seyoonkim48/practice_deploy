@@ -14,10 +14,11 @@ app.post('/login', (req, res) => {
     httpOnly : true,
     maxAge: 60*60*1000
   });
-  res.header({'authorization1': 'Bearer Toke'}).json({message : 'Login OK!!!', loginInfo : req.body});
+  res.header({'authorization': 'Bearer Token'}).json({message : 'Login OK!!!', loginInfo : req.body, token : 'token'});
 });
 app.get('/check', (req, res) => {
-  console.log(req.cookies);
+  console.log(req);
   res.send('plz everything is alright');
 })
-app.listen(80, () => console.log('Listening at ==> http://localhost:4000'));
+const port = 80;
+app.listen(port, () => console.log(`Listening at ==> port : {port}`));
