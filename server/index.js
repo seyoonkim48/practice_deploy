@@ -21,4 +21,4 @@ app.get('/check', (req, res) => {
   res.send('plz everything is alright');
 })
 const port = 80;
-app.listen(port, () => console.log(`Listening at ==> port : {port}`));
+app.listen(port, () => console.log(`Listening at ==> port : ${port}!`));
