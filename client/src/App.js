@@ -12,27 +12,37 @@ function App() {
     setLoginInfo({...loginInfo, [key] : e.target.value});
   };
   const handleLogin = () => {
-    console.log(loginInfo)
-    axios.post(`${url}/login`, loginInfo, {
-      headers : {
-        "Content-type" : 'application/json'
-      },
-      withCredentials : true
-    })
-    .then((res) => {
-      console.log(res);
-    });
+    try {
+      console.log(loginInfo)
+      axios.post(`${url}/login`, loginInfo, {
+        headers : {
+          "Content-type" : 'application/json'
+        },
+        withCredentials : true
+      })
+      .then((res) => {
+        alert(`로그인 시도 성공! 코드: ${res.status}`);
+        console.log(res);
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
   const handleCheck = () => {
-    axios.get(`${url}/check`, {
-      withCredentials : true,
-      headers : {
-        'Content-type' : 'application/json'
-      }
-    })
-    .then((res) => {
-      console.log(res);
-    });
+    try {
+      axios.get(`${url}/check`, {
+        withCredentials : true,
+        headers : {
+          'Content-type' : 'application/json'
+        }
+      })
+      .then((res) => {
+        alert('체크 버튼을 눌렀습니다.')
+        console.log(res);
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
   return (
     <div>
