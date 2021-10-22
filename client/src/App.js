@@ -50,7 +50,7 @@ function App() {
         <h1>로그인</h1>
         <form onSubmit={(e) => e.preventDefault()}>
           <div>
-            <span>ID</span>
+            <span>Your ID</span>
             <input
               type='text'
               onChange={handleChange('username')}
