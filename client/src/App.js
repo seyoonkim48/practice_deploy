@@ -21,7 +21,7 @@ function App() {
         withCredentials : true
       })
       .then((res) => {
-        alert(`로그인 시도 성공! 코드: ${res.status}`);
+        alert(`로그인 시도 성공! 깃헙 액션도 성공? 코드: ${res.status}`);
         console.log(res);
       });
     } catch (err) {
