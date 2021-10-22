@@ -10,9 +10,5 @@ jobs:                                 # Job 설정
     name: client action         # Job 이름
     runs-on: ubuntu-18.04             # Job 가상환경 인스턴스
     steps:                            # Steps
-      - name: cd client    # Step 이름
-        run: cd client
-      - name: npm install
-        run: npm install
       - name: run build
         run: npm run build
