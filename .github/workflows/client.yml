@@ -32,7 +32,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: client/node_modules
-          key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.OS }}-build-${{ hashFiles('client/package-lock.json') }}
           restore-keys: |
             ${{ runner.OS }}-build-
             ${{ runner.OS }}-        
