@@ -31,6 +31,8 @@ jobs:
 
       - name: Install Dependencies    # 의존 파일 설치
         run: npm install
+        working-directory: client
 
       - name: Build                   # React Build
         run: npm run build
+        working-directory: client
