@@ -10,5 +10,8 @@ jobs:                                 # Job 설정
     name: client action         # Job 이름
     runs-on: ubuntu-18.04             # Job 가상환경 인스턴스
     steps:                            # Steps
-      - name: run build
-        run: npm run build
+      - name: checkout source code    # Step 이름
+        uses: actions/checkout@master # Uses를 통한 외부 설정 가져오기: 자신의 레포지토리 소스 받아오기
+
+      - name: echo Hello              # Step 이름
+        run: echo "Hello" 
